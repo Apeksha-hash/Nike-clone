@@ -27,15 +27,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
         />
 
         {/* Quick Add Overlay */}
-        <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+        <div className="absolute inset-0 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
           <button
-            onClick={(e) => {
-              e.stopPropagation(); // Prevents clicking the card when clicking the button
-              onAddToCart();
-            }}
-            className="w-full bg-black text-white py-3 rounded-full text-sm font-medium hover:bg-zinc-800 transition"
+            onClick={onAddToCart}
+            className="w-11/12 bg-black text-white py-3 rounded-full text-sm font-medium hover:bg-zinc-800 transition"
           >
-            Add to Bag
+            Add to Cart
           </button>
         </div>
       </div>
